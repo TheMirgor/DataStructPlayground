@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+    </h:head>
+    <h:body>
+        <ui:composition template="/templates/DSPTemplate.xhtml">
+            <ui:define name="pageTitle">
+                <title>Data Structure Playground - Playing with Arrays</title>
+            </ui:define>
+            <ui:define name="content">
+                <p:outputLabel value="#{playingWithArrayBean.title}" style="font-weight: bold" />
+                <br/><br/>
+                <h:form id="form">
+                    <p:outputLabel value="Initial Array: #{playingWithArrayBean.asString}" />
+
+                    <p:spacer height="30px" width="100%" />
+
+                    <p:outputLabel value="Bubble Sorted Array (Descending): #{playingWithArrayBean.bubbleSortedDesc}" />
+
+                    <p:spacer height="30px" width="100%" />
+
+                    <p:outputLabel value="Merge Sorted Array (Descending divide &amp; conquer): #{playingWithArrayBean.mergeSortedDesc}" />
+
+                    <p:spacer height="30px" width="100%" />
+
+                    <p:outputLabel value="Quick Sorted Array (Descending divide &amp; conquer): #{playingWithArrayBean.quickSortedDesc}" />
+
+                    <p:spacer height="30px" width="100%" />
+
+                    <p:outputLabel value="Initial Array: #{playingWithArrayBean.asString}" />
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>

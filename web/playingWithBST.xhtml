@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+    </h:head>
+    <h:body>
+        <ui:composition template="/templates/DSPTemplate.xhtml">
+            <ui:define name="pageTitle">
+                <title>Data Structure Playground - Playing with Binary Search Trees</title>
+            </ui:define>
+            <ui:define name="content">
+                <p:outputLabel value="#{playingWithBSTBean.title}" style="font-weight: bold" />
+                <br/><br/>
+                <h:form id="form">
+                    <p:outputLabel value="Depth First Search" />
+                    <p:spacer height="10px" width="100%" />
+                    <p:commandLink actionListener="#{playingWithBSTBean.preOrderDFS}" value="Pre Order!" />
+                    &nbsp;
+                    <p:commandLink actionListener="#{playingWithBSTBean.inOrderDFS}" value="In Order!" />
+                    &nbsp;
+                    <p:commandLink actionListener="#{playingWithBSTBean.postOrderDFS}" value="Post Order!" />
+
+                    <p:spacer height="30px" width="100%" />
+
+                    <p:outputLabel value="Breadth First Search" />
+                    <p:spacer height="10px" width="100%" />
+                    <p:commandLink actionListener="#{playingWithBSTBean.BFS}" value="BFS!" />
+
+                    <p:spacer height="30px" width="100%" />
+
+                    <p:outputLabel value="Min" />
+                    <p:spacer height="10px" width="100%" />
+                    <p:commandLink actionListener="#{playingWithBSTBean.min}" value="Min!" />
+
+                    <p:spacer height="30px" width="100%" />
+
+                    <p:outputLabel value="Max" />
+                    <p:spacer height="10px" width="100%" />
+                    <p:commandLink actionListener="#{playingWithBSTBean.max}" value="Max!" />
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
